@@ -64,7 +64,7 @@ class HQRotationView: UIView {
         
         for i in 0 ..< titileArray.count {
             
-            let  btn = UIButton.init(type: .custom)
+            let  btn = UIButton.init()
             btn.frame = CGRect.init(x: 0, y: 0, width: BtnWidth, height: BtnWidth)
             btn.layer.masksToBounds = mask;
             btn.layer.cornerRadius = radius;
@@ -99,6 +99,11 @@ class HQRotationView: UIView {
             
             
             btn.addTarget(self, action: #selector(btnClick), for: .touchUpInside)
+            
+//            let gesture = UITapGestureRecognizer(target: self, action: #selector((btnClick")))
+            //附加识别器到视图
+//            btn.addGestureRecognizer(gesture)
+            
             self.addSubview(btn)
             _btnArray.append(btn)
             
@@ -110,14 +115,17 @@ class HQRotationView: UIView {
     
     func btnClick(_ sender: UIButton) {
         
-        if jump != nil {
-            
-            jump!(sender.tag)
-        }
+        print("Item点击",sender.tag)
+        
+//        if jump != nil {
+//            
+//            jump!(sender.tag)
+//        }
     }
     
     func selectBtn() {
-        
+        print("选中")
+
         let f = self.rotationAngleInRadians*CGFloat(180/M_PI);
         
         

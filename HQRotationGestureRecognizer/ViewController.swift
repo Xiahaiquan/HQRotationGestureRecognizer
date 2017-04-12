@@ -49,10 +49,10 @@ class ViewController: UIViewController {
         romate.delegate = self
         
         
-        romate.jump = { (num) in
-            
-            self.selectedCategoryEndWithIndex(num)
-        }
+//        romate.jump = { (num) in
+//            
+//            self.selectedCategoryEndWithIndex(num)
+//        }
         
 
     }
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
 
 extension ViewController: MyDelegate {
     func didAcceptSomethiong(_ someoneName: Int) {
-        print(someoneName)
+//        print(someoneName)
     }
 }
 

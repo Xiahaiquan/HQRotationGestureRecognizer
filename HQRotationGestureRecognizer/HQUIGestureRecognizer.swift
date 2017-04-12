@@ -16,6 +16,7 @@ class HQUIGestureRecognizer: UIGestureRecognizer {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
         
+        super.touchesMoved(touches, with: event)
         if (self.state == .possible) {
             self.state = .began
         } else {
@@ -43,7 +44,8 @@ class HQUIGestureRecognizer: UIGestureRecognizer {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent) {
-        
+        super.touchesMoved(touches, with: event)
+
         if (self.state == .changed) {
             self.state = .ended
         } else {
@@ -54,7 +56,9 @@ class HQUIGestureRecognizer: UIGestureRecognizer {
     
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent) {
+        super.touchesMoved(touches, with: event)
+
         self.state = .failed
-         
+        
     }
 }
