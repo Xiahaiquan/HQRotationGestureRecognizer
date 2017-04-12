@@ -49,10 +49,13 @@ class ViewController: UIViewController {
         romate.delegate = self
         
         
-//        romate.jump = { (num) in
-//            
-//            self.selectedCategoryEndWithIndex(num)
-//        }
+        romate.clicked = { (tag) in
+            
+            print("点击了第\(tag)个按钮")
+            let next = NextViewController()
+            next.label.text = "\(tag)"
+            self.navigationController?.present(next, animated: true, completion: nil)
+        }
         
 
     }
@@ -65,9 +68,10 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: MyDelegate {
-    func didAcceptSomethiong(_ someoneName: Int) {
-//        print(someoneName)
+extension ViewController: Delegate {
+    
+    func btnDidSelected (_ tag: Int) {
+        print("选中了第\(tag)个按钮")
     }
 }
 

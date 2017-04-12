@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DB84BD01E9E41B4000581BE /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB84BCE1E9E41B4000581BE /* NextViewController.swift */; };
+		2DB84BD11E9E41B4000581BE /* NextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB84BCF1E9E41B4000581BE /* NextViewController.xib */; };
 		2DF4E8CA1E9CFADA0045D1EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF4E8C91E9CFADA0045D1EF /* AppDelegate.swift */; };
 		2DF4E8CC1E9CFADA0045D1EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF4E8CB1E9CFADA0045D1EF /* ViewController.swift */; };
 		2DF4E8CF1E9CFADA0045D1EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF4E8CD1E9CFADA0045D1EF /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DB84BCE1E9E41B4000581BE /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		2DB84BCF1E9E41B4000581BE /* NextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NextViewController.xib; sourceTree = "<group>"; };
 		2DF4E8C61E9CFADA0045D1EF /* HQRotationGestureRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HQRotationGestureRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF4E8C91E9CFADA0045D1EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DF4E8CB1E9CFADA0045D1EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 				2DF4E8E51E9CFDC40045D1EF /* ViewUtil.swift */,
 				2DF4E8C91E9CFADA0045D1EF /* AppDelegate.swift */,
 				2DF4E8CB1E9CFADA0045D1EF /* ViewController.swift */,
+				2DB84BCE1E9E41B4000581BE /* NextViewController.swift */,
+				2DB84BCF1E9E41B4000581BE /* NextViewController.xib */,
 				2DF4E8CD1E9CFADA0045D1EF /* Main.storyboard */,
 				2DF4E8D01E9CFADA0045D1EF /* Assets.xcassets */,
 				2DF4E8D21E9CFADA0045D1EF /* LaunchScreen.storyboard */,
@@ -134,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DF4E8D41E9CFADA0045D1EF /* LaunchScreen.storyboard in Resources */,
+				2DB84BD11E9E41B4000581BE /* NextViewController.xib in Resources */,
 				2DF4E8D11E9CFADA0045D1EF /* Assets.xcassets in Resources */,
 				2DF4E8CF1E9CFADA0045D1EF /* Main.storyboard in Resources */,
 			);
@@ -147,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DF4E8E41E9CFCCD0045D1EF /* HQRotationView.swift in Sources */,
+				2DB84BD01E9E41B4000581BE /* NextViewController.swift in Sources */,
 				2DF4E8DD1E9CFB2F0045D1EF /* HQUIGestureRecognizer.swift in Sources */,
 				2DF4E8CC1E9CFADA0045D1EF /* ViewController.swift in Sources */,
 				2DF4E8CA1E9CFADA0045D1EF /* AppDelegate.swift in Sources */,
@@ -312,6 +320,7 @@
 				2DF4E8DA1E9CFADA0045D1EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

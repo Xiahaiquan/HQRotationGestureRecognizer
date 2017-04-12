@@ -8,18 +8,19 @@
 
 import UIKit
 
-protocol MyDelegate {
-    func didAcceptSomethiong(_ someoneName : Int)
+protocol Delegate {
+    
+    func btnDidSelected(_ tag : Int)
 }
 
 class HQRotationView: UIView {
     
     
-    var delegate : MyDelegate?
+    var delegate : Delegate?
     
-//    typealias jumpCloseBage = (_ num: Int) -> ()
-//    
-//    var jump = jumpCloseBage?()
+    typealias btnDidClicked = (_ tag: Int) -> ()
+    
+    var clicked: btnDidClicked?
     
    
     
@@ -85,24 +86,12 @@ class HQRotationView: UIView {
             
             btn.imageEdgeInsets = UIEdgeInsetsMake(-(btn.titleLabel!.intrinsicContentSize.height+2.0/2.0), 0, 0, -btn.titleLabel!.intrinsicContentSize.width)
             
-            //                    if (i == 0) {
-            //                            btn.backgroundColor = UIColor.yellow
-            //                    }else if (i == 1) {
-            //                        btn.backgroundColor = UIColor.blue
-            //
-            //                    }else if (i == 2) {
-            //                        btn.backgroundColor = UIColor.gray
-            //
-            //                    }else {
-            //                        btn.backgroundColor = UIColor.red
-            //            }
+            
             
             
             btn.addTarget(self, action: #selector(btnClick), for: .touchUpInside)
             
-//            let gesture = UITapGestureRecognizer(target: self, action: #selector((btnClick")))
-            //附加识别器到视图
-//            btn.addGestureRecognizer(gesture)
+
             
             self.addSubview(btn)
             _btnArray.append(btn)
@@ -117,25 +106,22 @@ class HQRotationView: UIView {
         
         print("Item点击",sender.tag)
         
-//        if jump != nil {
-//            
-//            jump!(sender.tag)
-//        }
+        if clicked != nil {
+            
+            clicked!(sender.tag)
+        }
     }
     
     func selectBtn() {
-        print("选中")
+        
 
         let f = self.rotationAngleInRadians*CGFloat(180/M_PI);
         
-        
         let  i = fabs(f) / 90;
-        
         
         let s = i.truncatingRemainder(dividingBy: 4)
         
-        
-        delegate?.didAcceptSomethiong(Int(s))
+        delegate?.btnDidSelected(Int(s))
         
         
     }
