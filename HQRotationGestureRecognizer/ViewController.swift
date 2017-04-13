@@ -52,9 +52,9 @@ class ViewController: UIViewController {
         romate.clicked = { (tag) in
             
             print("点击了第\(tag)个按钮")
-            let next = NextViewController()
-            next.label.text = "\(tag)"
-            self.navigationController?.present(next, animated: true, completion: nil)
+//            let next = NextViewController()
+//            next.label.text = "\(tag)"
+//            self.navigationController?.present(next, animated: true, completion: nil)
         }
         
 
