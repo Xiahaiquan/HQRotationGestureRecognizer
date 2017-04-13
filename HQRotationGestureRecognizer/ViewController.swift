@@ -36,6 +36,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addRomateView()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -51,10 +52,11 @@ class ViewController: UIViewController {
         
         romate.clicked = { (tag) in
             
-            print("点击了第\(tag)个按钮")
-//            let next = NextViewController()
-//            next.label.text = "\(tag)"
-//            self.navigationController?.present(next, animated: true, completion: nil)
+            
+            let next = NextViewController()
+            self.navigationController?.present(next, animated: true, completion: nil)
+            next.label.text = "选中了第\(tag)个Btn"
+            
         }
         
 

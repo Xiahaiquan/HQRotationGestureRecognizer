@@ -10,11 +10,14 @@ import UIKit
 
 class NextViewController: UIViewController {
 
+    
     @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
-        self.dismiss(animated: true, completion: nil)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +27,12 @@ class NextViewController: UIViewController {
     }
     
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        self.dismiss(animated: true, completion: nil)
+
+    }
+    
     /*
     // MARK: - Navigation
 
