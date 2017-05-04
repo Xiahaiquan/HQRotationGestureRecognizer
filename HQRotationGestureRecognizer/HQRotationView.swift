@@ -41,8 +41,11 @@ class HQRotationView: UIView {
         self.layer.cornerRadius = self.frame.size.width / 2 ;
         self.width = self.frame.size.width;
         
+        let GestureRecognizer = HQUIGestureRecognizer.init(target: self, action: #selector(changeMove))
         
-        self.addGestureRecognizer(HQUIGestureRecognizer.init(target: self, action: #selector(changeMove)))
+        GestureRecognizer.delegate = self
+        
+        self.addGestureRecognizer(GestureRecognizer)
         
         
         self.isUserInteractionEnabled = true
@@ -214,4 +217,15 @@ extension HQRotationView {
         
     }
     
+}
+
+extension HQRotationView: UIGestureRecognizerDelegate {
+    
+//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+//        
+//        if (touch.view?.isKind(of: UIButton.self))! {
+//            return false
+//        }
+//        return true
+//    }
 }
