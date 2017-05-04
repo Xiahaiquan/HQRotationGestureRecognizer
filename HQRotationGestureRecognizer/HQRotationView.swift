@@ -33,7 +33,7 @@ class HQRotationView: UIView {
     var  radians: CGFloat = 0
     
     
-    
+    let colors = [.red,.orange,.yellow,UIColor.green]
     
     
     override init(frame: CGRect) {
@@ -86,7 +86,7 @@ class HQRotationView: UIView {
             
             btn.imageEdgeInsets = UIEdgeInsetsMake(-(btn.titleLabel!.intrinsicContentSize.height+2.0/2.0), 0, 0, -btn.titleLabel!.intrinsicContentSize.width)
             
-            
+            btn.backgroundColor = colors[i]
             
             
             btn.addTarget(self, action: #selector(btnClick), for: .touchUpInside)

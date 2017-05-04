@@ -24,7 +24,11 @@ class ViewController: UIViewController {
         let romate = HQRotationView(frame:CGRect(x: 0, y: 0, width: rotatePlateWidth, height: rotatePlateWidth))
         
         let imageArray = ["ango_icon_xuanzhong_adas setting_100pc","ango_icon_xuanzhong_me_100px","ango_icon_xuanzhong_money_100px","ango_icon_xuanzhong_setting_icon_100px"]
-        let titleArray = ["HomeMe","HomeSet","ADAS","HomeFortune"]
+        
+//        let imageArray = ["ango_icon_adas setting_100px","ango_icon_me_100px","ango_icon_money_100px","ango_icon_setting_icon_100px"]
+
+        
+        let titleArray = ["1⃣️","2⃣️","3⃣️","4⃣️"]
         romate.Btn(BtnWidth: rotBtnsWidth, sizeWith: rotBtnsWidth, mask: true, radius: rotBtnsWidth/2, image: imageArray, titileArray: titleArray)
         
         
